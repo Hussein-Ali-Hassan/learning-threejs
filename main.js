@@ -5,6 +5,11 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 
+const audio = new Audio("/music.mp3");
+document.body.addEventListener("click", () => {
+  audio.play()
+})
+
 // Load fonts
 const fontLoader = new FontLoader();
 fontLoader.load("/helvetiker_regular.typeface.json", (font) => {
