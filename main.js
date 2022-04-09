@@ -7,7 +7,7 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry"
 
 // Load fonts
 const fontLoader = new FontLoader()
-fontLoader.load('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap', (font) => {
+fontLoader.load('./assets/helvetiker_regular.typeface.json', (font) => {
     const textGeometry = new TextGeometry("Ramdan Kareem", {
         font,
         size: 0.5,
