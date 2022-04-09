@@ -7,7 +7,7 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry"
 
 // Load fonts
 const fontLoader = new FontLoader()
-fontLoader.load("./assets/helvetiker_regular.typeface.json", (font) => {
+fontLoader.load('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap', (font) => {
     const textGeometry = new TextGeometry("Ramdan Kareem", {
         font,
         size: 0.5,
@@ -71,9 +71,7 @@ function addStar() {
   scene.add(star);
 }
 
-console.time("stars")
 Array(1200).fill().forEach(addStar);
-console.timeEnd("stars")
 
 const tick = () => {
   controls.update();
