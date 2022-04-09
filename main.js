@@ -13,10 +13,10 @@ document.body.addEventListener("click", () => {
 // Load fonts
 const fontLoader = new FontLoader();
 fontLoader.load("/helvetiker_regular.typeface.json", (font) => {
-  const textGeometry = new TextGeometry("Ramdan Kareem", {
+  const textGeometry = new TextGeometry("Ramadan Kareem", {
     font,
-    size: 2.4,
-    height: 0.2,
+    size: 2.3,
+    height: 0.4,
     curveSegments: 5,
     bevelEnabled: true,
     bevelThickness: 0.03,
@@ -42,7 +42,7 @@ const sizes = {
 const scene = new THREE.Scene();
 
 // Background
-const spaceTexture = new THREE.TextureLoader().load("/space.jpg");
+const spaceTexture = new THREE.TextureLoader().load("/bg.jpg");
 scene.background = spaceTexture;
 
 // Camera
@@ -51,20 +51,20 @@ camera.position.z = 26;
 scene.add(camera);
 
 // Torus
-
-const torusGeometry = new THREE.TorusGeometry(10, 3, 16, 100);
+const torusGeometry = new THREE.TorusGeometry(6, 3, 16, 80);
 const torusMaterial = new THREE.MeshStandardMaterial({ color: 0xff6347 });
 
 const torus1 = new THREE.Mesh(torusGeometry, torusMaterial);
 const torus2 = new THREE.Mesh(torusGeometry, torusMaterial);
-torus1.position.x = 30;
-torus2.position.x = -30;
+torus2.position.x = -35;
+torus2.position.y = 15;
+torus1.position.x = 35;
+torus1.position.y = -15;
 
 scene.add(torus1);
 scene.add(torus2);
 
 // Lights
-
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(5, 5, 5);
 
