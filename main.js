@@ -7,7 +7,7 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry"
 
 // Load fonts
 const fontLoader = new FontLoader()
-fontLoader.load('./assets/helvetiker_regular.typeface.json', (font) => {
+fontLoader.load('/helvetiker_regular.typeface.json', (font) => {
     const textGeometry = new TextGeometry("Ramdan Kareem", {
         font,
         size: 0.5,
@@ -37,7 +37,7 @@ const sizes = {
 const scene = new THREE.Scene();
 
 // Background
-const spaceTexture = new THREE.TextureLoader().load("./assets/space.jpg");
+const spaceTexture = new THREE.TextureLoader().load("/space.jpg");
 scene.background = spaceTexture;
 
 // Camera
